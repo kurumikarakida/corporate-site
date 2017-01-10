@@ -407,15 +407,11 @@ footer{
 }
         
   }
-     
-#contents #sidebar .pc_sidemenu li a{
-  color:#339fd1;
-}
+
+#sidebar{
   
-  .fb-page{
-  display:inline-block;
-  position:relative;
 }
+
 #contents #main h2.company_title{
   margin-bottom:0px;
 }
@@ -463,9 +459,34 @@ footer{
 }
 #contents #sidebar{
   padding-bottom:20px;
+  display:flex;
+  flex-direction:row;
 }
  @media(min-width:550px)
    {
+     #contents #sidebar .pc_sidemenu li{
+                              list-style:none;
+                              display:block;
+                              border-bottom:1px solid #e5e5e5;
+                              background-repeat:no-repeat;
+                              background-position:8px center;
+                              margin-bottom:0px;
+                              padding:10px 10px 10px 20px;
+                              background-image:url(../images/news/side_arrow@2x.png);
+                              background-size:4px 8px
+                            }   
+#contents #sidebar .pc_sidemenu li a{
+  color:#339fd1;
+  text-decoration:none;
+  font-weight:500;
+}
+   #contents #sidebar .pc_sidemenu li a:hover{
+          color: $blue1;
+        }
+#contents #sidebar .pc_sidemenu li a:hover{
+  color:42b9d0;
+}
+
    #sub_cover{
     padding:80px 0;
   }
@@ -508,20 +529,19 @@ footer{
   margin-bottom:0px;
 }
 
-                            #contents #sidebar .pc_sidemenu li{
-                              list-style:none;
-                              display:block;
-                              border-bottom:1px solid #e5e5e5;
-                              background-repeat:no-repeat;
-                              background-position:8px center;
-                              margin-bottom:0px;
-                              padding:10px 10px 10px 20px;
-                              background-image:url(../images/news/side_arrow@2x.png);
-                              background-size:4px 8px
-                            }
+                            
                        
 @media(max-width:550px){
-#contents #sidebar .pc_sidemenu{
-  display:none;
-}
+  #contents #sidebar{
+    flex-direction:column;
+  }
+  #contents #sidebar .pc_sidemenu h3{
+    display:none;
+  }
+  #contents #sidebar .pc_sidemenu ul{
+    display:none;
+    
+  }
+  
+
 }
